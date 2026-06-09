@@ -1,0 +1,12 @@
+{
+  "package": {
+    "scripts": {
+      "test": "node --test",
+      "smoke": "node cli.js --help"
+    },
+    "bin": {
+      "demo-tool": "cli.js"
+    }
+  },
+  "readme": "# Fixture\n\nRun `npm run test` and `npm run missing`.\n\nSee [Guide](docs/GUIDE.md) and [Gone](docs/GONE.md).\n"
+}

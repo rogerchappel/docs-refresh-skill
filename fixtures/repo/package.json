@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "node --test",
+    "smoke": "node cli.js --help"
+  },
+  "bin": {
+    "demo-tool": "cli.js"
+  }
+}
