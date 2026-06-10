@@ -9,11 +9,22 @@
   "exports": {
     ".": "./src/index.js"
   },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "SKILL.md"
+  ],
   "scripts": {
     "test": "node --test",
     "check": "node --check src/*.js bin/cli.js tests/*.test.js",
     "build": "node scripts/build.js",
-    "smoke": "node bin/cli.js --help && node scripts/smoke.js"
+    "smoke": "node bin/cli.js --help && node scripts/smoke.js",
+    "package:smoke": "npm pack --dry-run",
+    "release:check": "npm run check && npm test && npm run smoke && npm run package:smoke"
   },
   "keywords": [
     "agent-skill",
