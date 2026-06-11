@@ -14,8 +14,11 @@
     "src",
     "docs",
     "examples",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
     "README.md",
     "LICENSE",
+    "SECURITY.md",
     "SKILL.md"
   ],
   "scripts": {
