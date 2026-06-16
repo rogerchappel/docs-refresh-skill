@@ -2,49 +2,50 @@
 
 Detect documentation drift against package scripts, CLI bins, examples, and local files.
 
-## Quickstart
+## Status
 
-```bash
-npm test
-npm run smoke
-docs-refresh-skill --help
+This repository is early-stage. Use it for local automation and review workflows, and verify the output before relying on it in production.
+
+## Install
+
+```sh
+npm install
+npm run build
 ```
 
-## What It Does
+## Use
 
-Detect README/docs drift against package scripts, CLI help, examples, and current files.
+Start with the built-in help or the smallest local check:
 
-The package is local-first: it reads fixtures or project files and emits deterministic JSON/Markdown output. It does not publish, post, sync, or write to external accounts.
-
-## Examples
-
-See [examples/basic.md](examples/basic.md) and the fixture-backed tests in [tests/core.test.js](tests/core.test.js).
-
-## Limitations
-
-- V1 uses local fixtures and static checks only.
-- Live provider integrations require a separate approval and adapter layer.
-- Generated plans are review artifacts, not authorization to perform external writes.
-
-## Verification
-
-```bash
+```sh
+npx docs-refresh-skill --help
+```
+```sh
 npm test
-npm run check
-npm run build
-npm run smoke
-bash scripts/validate.sh
 ```
 
-## Release verification
+## Verify
 
-Run the same checks locally before opening a release PR:
+Run the local validation command before opening a pull request:
 
-```bash
-npm run check
+```sh
 npm test
-npm run build
-npm run smoke
+```
+
+For release hygiene, confirm the package contents before publishing:
+
+```sh
 npm run package:smoke
-npm run release:check
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution expectations. Keep changes small, reviewable, and backed by the verification command above.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for vulnerability reporting guidance. Do not include secrets, private logs, or customer data in issues or fixtures.
+
+## License
+
+MIT
