@@ -22,7 +22,11 @@ The package is local-first: it reads fixtures or project files and emits determi
 ```sh
 npx docs-refresh-skill --help
 ```
+
+From a checkout:
+
 ```sh
+node bin/cli.js --help
 npm test
 ```
 
@@ -52,7 +56,7 @@ bash scripts/validate.sh
 Run the local validation command before opening a pull request:
 
 ```sh
-npm test
+npm run release:check
 ```
 
 For release hygiene, confirm the package contents before publishing:
